@@ -1,0 +1,230 @@
+{% extends "model/base.html" %}
+{% load staticfiles %}
+
+{% block style %}
+    <style>
+      body{
+        background-color:#546e7a;
+      }
+    </style>
+{% endblock %}
+
+
+{% block title %}
+    Versions
+{% endblock %}
+
+{% block nav %}
+    <li>
+        <a href="{% url 'model:home' %}" class="black-text">Home</a>
+    </li>
+{% endblock %}
+
+{% block sidenav %}
+    <li>
+        <a href="{% url 'model:home' %}" class="black-text">Home</a>
+    </li>
+{% endblock %}
+
+
+{% block body %}
+<body class = "container"> 
+    <div class = "row">
+       <div class = "col s12">
+          <ul class = "tabs">
+             <li class = "tab col s3"><a  class="active" href = "#model">Model</a></li>
+             <li class = "tab col s3"><a  href = "#predict">Predict</a></li>
+             <li class = "tab col s3 "><a href = "#test">Test </a></li>
+             <li class = "tab col s3"><a href = "#train">Train</a></li>
+          </ul>
+       </div>
+       
+       <div id = "model" class = "col s12">model
+          <div class="row">
+              <div class="col s12 m7">
+                <div class="card large white">
+                  <div class="card-content black-text">
+                    <span class="card-title">model Documents</span>
+                    <p>I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use
+                    >I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use 
+                    >I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use 
+                    I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use
+                    >I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use 
+                    >I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use
+                    I am convenient because I require little markup to use 
+                    >I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use
+                    I am convenient because I require little markup to use 
+                    </p>
+                      
+                    </div>
+                    <div class=right-align>      
+                        <button class="btn waves-effect waves-light blue-grey darken-1 white-text">Button</button>
+                        </div>
+                </div><!--card blue-grey darken1-->
+               
+                </div>
+                <div class="col s12 m4">
+                    <div class="card large white ">
+                      <div class="card-content black-text">
+                        <span class="card-title">logs</span>
+                        <p>I am a very simple card. I am good at containing small bits of information.
+                        I am convenient because I require little markup to use effectively.</p>
+                      </div>
+                    </div>
+            </div>
+              </div>
+              </div>
+
+              <div id = "predict" class = "col s12">predict
+                    <div class="row">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                  <input id="instance_id" type="text" class="validate">
+                                  <label for="instance_id">Instance Id</label>
+                                </div>
+                            </div>
+                            <div class = "row">
+                                <label>CSV File Input</label>
+                                <div class = "file-field input-field">
+                                  <div class = "btn">
+                                      <span>Browse</span>
+                                      <input type = "file" />
+                                  </div>
+                                  
+                                  <div class = "file-path-wrapper">
+                                      <input class = "file-path validate" type = "text"
+                                        placeholder = "Upload file" />
+                                  </div>
+                                </div>
+                            </div><!--end of row -->
+                        
+                            
+                            <button class="btn waves-effect waves-light" type="submit" name="submit" onclick="validate()">Submit</button>
+                                                
+                        </form>
+                      </div>
+        
+        
+        
+                 </div>
+        
+                 <div id = "test" class = "col s12">test 
+                    <div class="row">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                  <input id="instance_id" type="text" class="validate">
+                                  <label for="instance_id">Instance Id</label>
+                                </div>
+                            </div>
+                            <div class = "row">
+                                <label>CSV File Input</label>
+                                <div class = "file-field input-field">
+                                  <div class = "btn">
+                                      <span>Browse</span>
+                                      <input type = "file" />
+                                  </div>
+                                  
+                                  <div class = "file-path-wrapper">
+                                      <input class = "file-path validate" type = "text"
+                                        placeholder = "Upload file" />
+                                  </div>
+                                </div>
+                            </div><!--end of row -->
+                        
+                            <div class = "row">
+                                <label>CSV File Input</label>
+                                <div class = "file-field input-field">
+                                  <div class = "btn">
+                                      <span>Browse</span>
+                                      <input type = "file" />
+                                  </div>
+                                  
+                                  <div class = "file-path-wrapper">
+                                      <input class = "file-path validate" type = "text"
+                                        placeholder = "Upload file" />
+                                  </div>
+                                </div>
+                            </div>
+                            <button class="btn waves-effect waves-light" type="submit" name="submit" onclick="validate()">Submit</button>
+                                                
+                        </form>
+                      </div>
+                 </div>
+                 <div id = "train" class = "col s12">train
+                    <div class="row">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                  <input id="instance_id" type="text" class="validate">
+                                  <label for="instance_id">Instance Id</label>
+                                </div>
+                            </div>
+                            <body class = "container">   
+                                <div class = "row">
+                                   <form class = "col s12">
+                                      <div class = "row">
+                                         <label>CSV File Input</label>
+                                         <div class = "file-field input-field">
+                                            <div class = "btn">
+                                               <span>Browse</span>
+                                               <input type = "file" />
+                                            </div>
+                                            
+                                            <div class = "file-path-wrapper">
+                                               <input class = "file-path validate" type = "text"
+                                                  placeholder = "Upload file" />
+                                            </div>
+                                         </div>
+                                      </div><!--end of row above label tag-->
+                                      <body class = "container">   
+                                          <div class = "row">
+                                             <form class = "col s12">
+                                                <div class = "row">
+                                                   <label>CSV File Input</label>
+                                                   <div class = "file-field input-field">
+                                                      <div class = "btn">
+                                                         <span>Browse</span>
+                                                         <input type = "file" />
+                                                      </div>
+                                                      
+                                                      <div class = "file-path-wrapper">
+                                                         <input class = "file-path validate" type = "text"
+                                                            placeholder = "Upload file" />
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <button class="btn waves-effect waves-light" type="submit" name="submit">Submit
+                                                  
+                                                </button>
+                        </form>
+                      </div> 
+        
+                 </div>
+                </div>
+           </body>
+
+
+
+{% endblock %}
+
+{% block footer %}
+    <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+    <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+    <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+    <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+{% endblock %}
+
+{% block script %}
+<script type = "text/javascript"src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+{% endblock %}
+            

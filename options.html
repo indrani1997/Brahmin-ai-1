@@ -39,7 +39,7 @@
           </ul>
        </div>
        
-       <div id = "model" class = "col s12">model
+       <div id = "model" class = "col s12">
           <div class="row">
               <div class="col s12 m7">
                 <div class="card large white">
@@ -65,10 +65,10 @@
                       
                     </div>
                     <div class=right-align>      
-                        <button class="btn waves-effect waves-light blue-grey darken-1 white-text">Button</button>
-                        </div>
-                </div><!--card blue-grey darken1-->
-               
+                            <button class="btn waves-effect waves-light blue-grey darken-1 white-text">Button</button>
+                            </div>
+                </div><!--card large white darken1-->
+                
                 </div>
                 <div class="col s12 m4">
                     <div class="card large white ">
@@ -82,9 +82,9 @@
               </div>
               </div>
 
-              <div id = "predict" class = "col s12">predict
+              <div id = "predict" class = "col s12">
                     <div class="row">
-                        <form class="col s12">
+                        <form class="col s12 " method="post" enctype="multipart/form-data" action="">
                             <div class="row">
                                 <div class="input-field col s12">
                                   <input id="instance_id" type="text" class="validate">
@@ -110,15 +110,15 @@
                             <button class="btn waves-effect waves-light" type="submit" name="submit" onclick="validate()">Submit</button>
                                                 
                         </form>
-                      </div>
+                    </div>
         
         
         
                  </div>
         
-                 <div id = "test" class = "col s12">test 
+                 <div id = "test" class = "col s12">
                     <div class="row">
-                        <form class="col s12">
+                        <form class="col s12 " method="post" enctype="multipart/form-data" action="">
                             <div class="row">
                                 <div class="input-field col s12">
                                   <input id="instance_id" type="text" class="validate">
@@ -149,7 +149,7 @@
                                   </div>
                                   
                                   <div class = "file-path-wrapper">
-                                      <input class = "file-path validate" type = "text"
+                                      <input class = "file-path validate" type = "text" class="validate"
                                         placeholder = "Upload file" />
                                   </div>
                                 </div>
@@ -159,9 +159,9 @@
                         </form>
                       </div>
                  </div>
-                 <div id = "train" class = "col s12">train
+                 <div id = "train" class = "col s12">
                     <div class="row">
-                        <form class="col s12">
+                        <form class="col s12 " method="post" enctype="multipart/form-data" action="">
                             <div class="row">
                                 <div class="input-field col s12">
                                   <input id="instance_id" type="text" class="validate">
@@ -180,7 +180,7 @@
                                             </div>
                                             
                                             <div class = "file-path-wrapper">
-                                               <input class = "file-path validate" type = "text"
+                                               <input class = "file-path validate" type = "text" class="validate"
                                                   placeholder = "Upload file" />
                                             </div>
                                          </div>
@@ -209,8 +209,8 @@
                       </div> 
         
                  </div>
-                </div>
-           </body>
+            </div>
+        </body>
 
 
 
